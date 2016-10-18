@@ -17,4 +17,4 @@ java -jar lib/password-exporter.jar <database-file> <password>
 
 # Acknowledgements
 
-This tool makes use of Philip DeCamp's JDBC Driver for SQLCipher, [sqlcipher-jdbc](https://github.com/decamp/sqlcipher-jdbc).
+This tool makes use of the SQLite JDBC driver that Philip DeCamp modified to work with SQLCipher, [sqlcipher-jdbc](https://github.com/decamp/sqlcipher-jdbc).

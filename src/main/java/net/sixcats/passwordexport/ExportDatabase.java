@@ -19,6 +19,6 @@ public class ExportDatabase {
     }
 
     private static void usage() {
-        System.err.println("Usage: java net.sixcats.passwordexport.ExportDatabase <database-file> <password>");
+        System.err.println("Usage: java -jar password-exporter.jar <database-file> <password>");
     }
 }

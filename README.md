@@ -11,7 +11,7 @@ This tool requires Java 1.8 or later and a 64-bit version of OS X.
 # Usage
 
 ```
-java -jar lib/password-exporter.jar <database-file> <password>
+java -jar password-exporter.jar <database-file> <password>
 ```
 
 

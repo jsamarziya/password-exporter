@@ -1,5 +1,5 @@
 group 'net.sixcats'
-version '1.0'
+version '1.1-SNAPSHOT'
 
 buildscript {
     repositories {

@@ -1,14 +1,23 @@
 group 'net.sixcats'
-version '1.0-SNAPSHOT'
+version '1.0'
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '3.1'
-    distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
+    }
 }
 
+apply plugin: 'application'
+apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'java'
 
+//noinspection GroovyUnusedAssignment
 sourceCompatibility = 1.8
+//noinspection GroovyUnusedAssignment
+mainClassName = 'net.sixcats.passwordexport.ExportDatabase'
 
 repositories {
     mavenCentral()
@@ -18,3 +27,14 @@ dependencies {
     compile 'org.json:json:20160810'
     runtime files('lib/sqlite-jdbc4-3.8.2-SNAPSHOT.jar')
 }
+
+shadowJar {
+    classifier = null
+    version = null
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.1'
+    distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+}
+

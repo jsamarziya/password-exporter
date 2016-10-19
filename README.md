@@ -1,6 +1,6 @@
 # Password Exporter
 
-Exports a Codebook database (i.e. a `strip.db` file) to JSON.
+Exports a [Codebook](https://www.zetetic.net/codebook/) database (i.e. a `strip.db` file) to JSON.
 
 
 # Requirements
